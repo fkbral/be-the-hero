@@ -53,7 +53,7 @@ export default function Details() {
       <View style={styles.incident}>
         <View style={styles.incidentData}>
           <Text style={styles.incidentProperty}>CASO:</Text>
-          <Text style={styles.incidentValue}>{incident.name}</Text>
+          <Text style={styles.incidentValue}>{incident.title}</Text>
           <Text style={styles.incidentProperty}>DESCRIÇÃO:</Text>
           <Text style={styles.incidentValue}>{incident.description}</Text>
           <Text style={styles.incidentProperty}>ONG:</Text>

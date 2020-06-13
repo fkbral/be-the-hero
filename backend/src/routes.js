@@ -7,8 +7,6 @@ const ProfileController = require('./controllers/ProfileController');
 
 const routes = express.Router();
 
-routes.get('/', (req, res) => res.json({ message: 'Hello Warudo' }));
-
 routes.get('/ngos', NgoController.index);
 routes.post('/ngos', NgoController.store);
 
