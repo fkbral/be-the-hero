@@ -1,0 +1,21 @@
+FROM node:lts-alpine
+
+WORKDIR /home/node/web
+
+RUN mkdir -p node_modules && chown -R node:node node_modules
+
+RUN mkdir -p build && chown -R node:node build
+
+COPY package.json yarn.* ./
+
+USER node
+
+RUN yarn
+
+COPY --chown=node:node . .
+
+RUN yarn build .
+
+EXPOSE 3000
+
+CMD ["yarn", "start"]
